@@ -1,0 +1,178 @@
+*{ box-sizing: border-box;
+
+font-family: 'Rubik', sans-serif;
+}
+body { margin: 0;
+display: grid;
+grid-template-columns: 5fr 1fr;
+grid-template-rows: 75px 6fr 1fr;
+grid-template-areas: "header header"
+"main aside"
+"footer footer";
+height: 100vh;
+width: 100%;
+background-color:rgb(222, 255, 201)} /*backspace entre o r*/
+
+header { grid-area: header; /*duplas aspas retirada*/
+display: flex;
+justify-content: center;
+align-content: center;
+align-items: center;
+background-color: rgb(255, 255, 255, 0.8);
+box-shadow: 2px 2px 10px darkolivegreen;
+}
+
+main { grid-area: main;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr)  ;
+    grid-template-rows: 2fr 1fr;
+    grid-template-areas: "noticia imagem imagem" /*vírgula retirada*/
+    "publi cards cards" ;
+ 
+}
+aside { grid-area: aside;
+text-align: justify;
+padding: 5%;}
+
+
+aside h4 {text-align: center; } 
+
+footer {grid-area: footer;
+display: grid;
+grid-template-columns: 1fr 1fr 1fr;
+justify-items:center ;
+align-items: center;
+background-color: black;
+color: white;}
+
+footer ul { list-style: none;}
+
+footer ul li { height: 2.5vh;}
+
+#noticia { grid-area: noticia;
+text-align: justify;
+padding: 2%;
+}
+
+#noticia h1 { text-align: right;
+text-shadow: 1px 1px 1px navy;
+color: rgb(33, 119, 165)}
+
+#imagem { grid-area: imagem;
+display: flex;
+align-items: center;
+justify-content: center;}
+
+#cards { 
+    margin-top: 2%;
+    grid-area: cards;
+display: grid;
+grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+align-content:space-around ;
+}
+
+#cards img { box-shadow: 4px 4px 5px black;
+    transition: transform 5s;
+}
+
+#cards img:hover{transform: scale(1.2);}
+
+
+
+#publi { grid-area: publi;
+display: flex;
+align-items: center;}
+
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48;
+}
+
+.material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 200,
+    'opsz' 48;
+  }
+
+nav{width: 65%;}
+
+.img { width: 10%;
+margin-left: 2%;
+margin-right: 2%;
+
+}
+
+nav>ul { width: 80%;
+display: flex;
+justify-content: center;
+align-items: center;
+align-content: center;
+
+margin: 0 auto;
+list-style: none;
+text-align: center;}
+
+nav>ul>li { width: 20%;
+position: relative;
+height: 4vh;
+margin: 1%;
+border-radius: 5px;
+line-height: 4vh;
+background-color: rgb(33, 119, 165);
+color: white;
+transition: background-color 1s;
+}
+
+nav>ul>li:hover { background-color: darkolivegreen;}
+
+
+
+nav~div { margin-left: 2%;
+margin-right: 2%;
+padding: 2px;
+padding-left: 5px;
+padding-right: 5px;
+border-radius: 5px;
+color: forestgreen;
+font-weight:700;
+border: inset forestgreen 3px;
+transition: background-color 1s, color .5s;
+}
+
+div:hover { /*tag nav antes da div removida*/
+    background-color: rgb(33, 119, 165);
+    color: white;
+    border: inset rgb(33, 119, 165) 3px;
+
+}
+
+nav>ul>li>ul { list-style: none;
+padding: 0;
+position: absolute;
+width: 100%;
+top: 3.5vh;
+display: none;
+
+}
+
+
+nav>ul>li>ul>li { height: 3.5vh;
+margin-top: 2px;
+border-radius: 5px;
+line-height: 3.5vh;
+background-color: rgba(85, 118, 47, 0.644);
+color: white}
+
+nav>ul>li>ul>li:hover {
+    background-color:rgb(48, 66, 15) ;
+}
+
+li:hover ul { display: block; /*backspace entre o : e o hover*/
+}
+
